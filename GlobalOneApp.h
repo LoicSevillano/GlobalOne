@@ -12,10 +12,6 @@ private:
 	CAdoDatabase m_database;
 	CBandeau m_fenetreMenu;
 
-	CFormulaireClient m_fenetreClient;
-	CFormulaireClient m_fenetreAccueil;
-	CFormulaire* m_pFormulaire;
-
 public:
 	CGlobalOneApp(HINSTANCE hInst, HWND hWnd, wstring sConnect);
 
@@ -30,7 +26,7 @@ public:
 	{
 		return &m_fenetreAccueil;
 	}
-
+	
 	void setFormulaire(CFormulaire* hF) 
 	{
 		m_pFormulaire = hF;
@@ -42,8 +38,3 @@ public:
 	}
 
 };
-/*HINSTANCE GetInstance(NULL)()
-{
-	return GetInstance();
-}*/
-

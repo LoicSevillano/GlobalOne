@@ -1,4 +1,5 @@
 #include "GlobalOneApp.h"
+extern HINSTANCE hInst;
 
 CGlobalOneApp::CGlobalOneApp(HINSTANCE hInst, HWND hWnd, wstring sConnect)
 {
@@ -12,5 +13,9 @@ CGlobalOneApp::CGlobalOneApp(HINSTANCE hInst, HWND hWnd, wstring sConnect)
 	GetWindowRect(hWnd, &r);
 	m_fenetreMenu.Create(hInst,WS_CHILDWINDOW, hWnd, 0, 0, 100, r.bottom - r.top);
 	ShowWindow(m_fenetreMenu.GethWnd(), SW_SHOW);
+}
+HINSTANCE GetInstance()
+{
+	return hInst;
 }
 
